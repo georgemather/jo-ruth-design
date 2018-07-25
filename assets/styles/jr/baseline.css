@@ -29,7 +29,7 @@ body {
   width: 50%;
   border: 0;
   height: 1px;
-  background: #f2f2f2;
+  background: #e7e7e7;
   margin-bottom: 1px;
 }
 #fade {
@@ -102,7 +102,7 @@ a.social img {
 .portfolio a {
   text-transform: uppercase;
   margin-bottom: 10px;
-  font-size: 9px;
+  font-size: 0.75em;
 }
 .portfolio a .portfolio-category.image-container {
   display: inline-grid;
@@ -118,4 +118,221 @@ a.social img {
   text-transform: uppercase;
   padding-bottom: 15px;
   font-size: 9px;
+}
+@media screen and (orientation: landscape) {
+  #header {
+    position: fixed;
+    width: 100%;
+    background-position: 20px 20px;
+    background-size: 130px;
+  }
+  #header hr {
+    margin-top: 45px;
+    position: relative;
+    left: 40%;
+    width: 25%;
+  }
+  #navigation {
+    padding: 0;
+    text-align: left;
+  }
+  .nav ul {
+    display: block;
+  }
+  .nav ul li {
+    padding: 0 8px;
+  }
+  .nav-main ul {
+    position: relative;
+    top: 18px;
+    left: 25%;
+  }
+  .nav-main ul li:first-child {
+    display: none;
+  }
+  .social ul {
+    padding: 0;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+  }
+  #body {
+    top: 80px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .portfolio a .portfolio-category.image-container {
+    height: 25vw;
+    width: 20vw;
+  }
+}
+@media only screen and (orientation: portrait) and (min-device-width: 550px) {
+  body {
+    font-size: 14px;
+  }
+  #header {
+    position: fixed;
+    top: 20px;
+    width: 80%;
+    background-position: 20px 20px;
+    background-size: 180px;
+  }
+  #header hr {
+    margin-top: 75px;
+    position: relative;
+    left: 35%;
+    width: 30%;
+  }
+  #navigation {
+    padding: 0;
+    text-align: left;
+  }
+  .nav ul {
+    display: block;
+  }
+  .nav ul li {
+    padding: 0 8px;
+  }
+  .nav-main ul {
+    position: relative;
+    top: 31px;
+    left: 205px;
+  }
+  .nav-main ul li:first-child {
+    display: none;
+  }
+  .social ul {
+    padding: 0;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    margin-top: 25px;
+  }
+  .social ul li a img {
+    height: 25px;
+  }
+  .portfolio a {
+    font-size: 0.9em;
+  }
+  #body {
+    top: 120px;
+  }
+  #footer {
+    font-size: 1em;
+  }
+}
+@media only screen and (orientation: portrait) and (min-device-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+  .nav ul li {
+    padding: 0 15px;
+  }
+  .nav-main ul {
+    top: 28px;
+    font-size: 1.1em;
+  }
+  .portfolio a {
+    font-size: 1em;
+  }
+  .portfolio a .portfolio-category.image-container {
+    height: 34vw;
+  }
+}
+@media only screen and (orientation: landscape) and (min-device-width: 660px) {
+  .nav {
+    font-size: 1.2em;
+  }
+  .nav-main ul {
+    left: 150px;
+  }
+  .nav-main ul li:first-child {
+    display: inline-block;
+  }
+  .portfolio a {
+    font-size: 0.9em;
+  }
+  .nav-main ul {
+    top: 18px;
+    font-size: 0.9em;
+  }
+}
+@media only screen and (orientation: landscape) and (min-device-width: 1024px) {
+  #header {
+    width: 80%;
+    background-size: 180px;
+  }
+  #header hr {
+    margin-top: 63px;
+    left: 35%;
+    width: 30%;
+  }
+  .nav {
+    font-size: 1.25em;
+  }
+  .nav-main ul {
+    left: 200px;
+    top: 28px;
+  }
+  .social ul {
+    margin-top: 23px;
+  }
+  .social ul li a img {
+    height: 27px;
+  }
+  .portfolio a {
+    font-size: 1em;
+  }
+  #footer {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 1em;
+  }
+}
+@media only screen and (orientation: landscape) and (min-device-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+  #body {
+    top: 140px;
+  }
+  #header {
+    background-size: 200px;
+    padding-top: 35px;
+    background-position: 20px 55px;
+  }
+  #header hr {
+    margin-top: 70px;
+  }
+  .nav ul li {
+    padding: 0 20px;
+  }
+  .nav-main ul {
+    left: 230px;
+    top: 32px;
+  }
+  .social ul li {
+    padding: 0 10px;
+  }
+}
+@media only screen and (orientation: landscape) and (min-device-width: 1400px) {
+  body {
+    font-size: 12px;
+  }
+  #header hr {
+    margin-top: 72px;
+  }
+  #body {
+    width: 60%;
+  }
+  .portfolio a {
+    font-size: 1em;
+  }
+  .portfolio a .portfolio-category.image-container {
+    height: 15vw;
+    width: 15vw;
+    padding-bottom: 1vw;
+  }
 }
