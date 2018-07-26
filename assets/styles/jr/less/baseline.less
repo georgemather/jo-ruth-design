@@ -17,7 +17,7 @@ body {
 
 #wrapper{
     position: absolute;
-    height: 100%;
+    min-height: 100%;
     width:100%;
     text-align:center;
 }
@@ -26,6 +26,7 @@ body {
 //Header variables
 @logo-size-mobile: 40%;
 @mobile-page-padding: 20px;
+@header-displacement: 160px;
 
 #header{
   position: fixed;
@@ -80,6 +81,9 @@ body {
   }
   margin-bottom: 15px;
   margin-top: 20px;
+  a.active, a:hover{
+    color: #000000;
+  }
 }
 .social{
   ul{
@@ -98,7 +102,8 @@ a.social {
 #body{
   position: relative;
   width:100%;
-  top:160px;
+  padding-top: @header-displacement;
+  padding-bottom:40px;
   width: 75%;
   left: 50%;
   min-width: 288px;
@@ -147,6 +152,7 @@ a.social {
 
   a {
     text-transform: uppercase;
+    margin: 0 auto;
     margin-bottom: 10px;
     font-size: 0.75em;
     .portfolio-category.image-container{
@@ -164,11 +170,19 @@ a.social {
   color: @light-grey;
   text-align: center;
   text-transform: uppercase;
-  padding-bottom:15px;
+  left: 0;
+  width: 100%;
+  padding-bottom: 25px;
+  font-size: 1em;
+  //margin-top: @header-displacement;
+  bottom:0px;
+  position: absolute;
   font-size: @default-font-height*0.75;
 }
 
+//landscape variables
 @media screen and (orientation: landscape) {
+  @header-displacement-landscape-mobile: 80px;
   //header business
   #header {
       position: fixed;
@@ -210,7 +224,7 @@ a.social {
 
   //body (to be extracted)
   #body{
-    top:80px;
+    padding-top: @header-displacement-landscape-mobile;
   }
   .grid{
     display:grid;
@@ -224,17 +238,31 @@ a.social {
       }
     }
   }
+  #footer{
+    //margin-top:@header-displacement-landscape-mobile;
+  }
 }
-@media only screen and (orientation: portrait) and (min-device-width : 550px) {
+@media only screen and (orientation: portrait) and (min-width: 550px) and (max-width : 710px) {
+  @header-displacement-portrait-mid:180px;
+  #body{
+    padding-top:@header-displacement-portrait-mid;
+  }
+  #footer{
+    //margin-top:@header-displacement-portrait-mid;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width : 710px) {
   body {
     font-size: @large-font-height;
   }
   //header business
+  @header-displacement-portrait-large:120px;
   #header {
       position: fixed;
-      top: 20px;
+      padding-top: 20px;
       width: 80%;
-      background-position: 20px 20px;
+      background-position: 20px 40px;
       background-size: 180px;
       hr {
         margin-top: 75px;
@@ -283,13 +311,14 @@ a.social {
   }
   //body
   #body{
-    top: 120px;
+    padding-top: @header-displacement-portrait-large;
   }
   #footer{
     font-size:1em;
+    //margin-top: @header-displacement-portrait-large;
   }
 }
-@media only screen and (orientation: portrait) and (min-device-width : 900px) {
+@media only screen and (orientation: portrait) and (min-width : 900px) {
   body{
     font-size: 16px;
   }
@@ -311,7 +340,7 @@ a.social {
 
 
 }
-@media only screen and (orientation: landscape) and (min-device-width : 660px) {
+@media only screen and (orientation: landscape) and (min-width : 660px) {
   .nav{
     font-size: 1.2em;
   }
@@ -332,7 +361,7 @@ a.social {
     font-size: 0.9em;
   }
 }
-@media only screen and (orientation: landscape) and (min-device-width: 1024px){
+@media only screen and (orientation: landscape) and (min-width: 1024px){
   #header{
     width: 80%;
     background-size: 180px;
@@ -366,16 +395,22 @@ a.social {
   }
   #footer{
     text-align: left;
-    margin-top:20px;
+    //margin-top:20px;
     font-size: 1em;
+    width: 80%;
+    left: 12%;
   }
 }
-@media only screen and (orientation: landscape) and (min-device-width: 1200px){
+@media only screen and (orientation: landscape) and (min-width: 1200px){
   body{
     font-size: @large-font-height;
   }
+  @header-displacement-landscape-large:140px;
   #body{
-    top:140px;
+    padding-top:@header-displacement-landscape-large;
+  }
+  #footer{
+    //margin-top: @header-displacement-landscape-large;
   }
   #header{
     background-size: 200px;
@@ -406,7 +441,7 @@ a.social {
     }
   }
 }
-@media only screen and (orientation: landscape) and (min-device-width: 1400px){
+@media only screen and (orientation: landscape) and (min-width: 1400px){
   body{
     font-size: @default-font-height;
   }
@@ -419,12 +454,33 @@ a.social {
   #body{
     width: 60%;
   }
+  .grid{
+    padding-top: 10vh;
+  }
   .portfolio a {
     font-size: 1em;
+    max-width: 240px;
     .portfolio-category.image-container{
       height: 15vw;
       width: 15vw;
+      max-width: 240px;
       padding-bottom: 1vw;
     }
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 1600px){
+  #header{
+    width: 70%;
+  }
+  //body
+  #body{
+    width: 55%;
+  }
+  .grid{
+    padding-top: 7vh;
+  }
+  #footer{
+    width:70%;
+    left:17%;
   }
 }

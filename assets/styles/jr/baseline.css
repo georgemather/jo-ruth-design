@@ -6,7 +6,7 @@ body {
 }
 #wrapper {
   position: absolute;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   text-align: center;
 }
@@ -59,6 +59,10 @@ body {
 .nav ul li {
   display: inline-block;
 }
+.nav a.active,
+.nav a:hover {
+  color: #000000;
+}
 .social ul {
   padding: 0 36%;
 }
@@ -68,7 +72,8 @@ a.social img {
 #body {
   position: relative;
   width: 100%;
-  top: 160px;
+  padding-top: 160px;
+  padding-bottom: 40px;
   width: 75%;
   left: 50%;
   min-width: 288px;
@@ -101,6 +106,7 @@ a.social img {
 }
 .portfolio a {
   text-transform: uppercase;
+  margin: 0 auto;
   margin-bottom: 10px;
   font-size: 0.75em;
 }
@@ -116,7 +122,12 @@ a.social img {
   color: #808080;
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 15px;
+  left: 0;
+  width: 100%;
+  padding-bottom: 25px;
+  font-size: 1em;
+  bottom: 0px;
+  position: absolute;
   font-size: 9px;
 }
 @media screen and (orientation: landscape) {
@@ -157,7 +168,7 @@ a.social img {
     text-align: right;
   }
   #body {
-    top: 80px;
+    padding-top: 80px;
   }
   .grid {
     display: grid;
@@ -168,15 +179,20 @@ a.social img {
     width: 20vw;
   }
 }
-@media only screen and (orientation: portrait) and (min-device-width: 550px) {
+@media only screen and (orientation: portrait) and (min-width: 550px) and (max-width: 710px) {
+  #body {
+    padding-top: 180px;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 710px) {
   body {
     font-size: 14px;
   }
   #header {
     position: fixed;
-    top: 20px;
+    padding-top: 20px;
     width: 80%;
-    background-position: 20px 20px;
+    background-position: 20px 40px;
     background-size: 180px;
   }
   #header hr {
@@ -217,13 +233,13 @@ a.social img {
     font-size: 0.9em;
   }
   #body {
-    top: 120px;
+    padding-top: 120px;
   }
   #footer {
     font-size: 1em;
   }
 }
-@media only screen and (orientation: portrait) and (min-device-width: 900px) {
+@media only screen and (orientation: portrait) and (min-width: 900px) {
   body {
     font-size: 16px;
   }
@@ -241,7 +257,7 @@ a.social img {
     height: 34vw;
   }
 }
-@media only screen and (orientation: landscape) and (min-device-width: 660px) {
+@media only screen and (orientation: landscape) and (min-width: 660px) {
   .nav {
     font-size: 1.2em;
   }
@@ -259,7 +275,7 @@ a.social img {
     font-size: 0.9em;
   }
 }
-@media only screen and (orientation: landscape) and (min-device-width: 1024px) {
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
   #header {
     width: 80%;
     background-size: 180px;
@@ -287,16 +303,17 @@ a.social img {
   }
   #footer {
     text-align: left;
-    margin-top: 20px;
     font-size: 1em;
+    width: 80%;
+    left: 12%;
   }
 }
-@media only screen and (orientation: landscape) and (min-device-width: 1200px) {
+@media only screen and (orientation: landscape) and (min-width: 1200px) {
   body {
     font-size: 14px;
   }
   #body {
-    top: 140px;
+    padding-top: 140px;
   }
   #header {
     background-size: 200px;
@@ -317,7 +334,7 @@ a.social img {
     padding: 0 10px;
   }
 }
-@media only screen and (orientation: landscape) and (min-device-width: 1400px) {
+@media only screen and (orientation: landscape) and (min-width: 1400px) {
   body {
     font-size: 12px;
   }
@@ -327,12 +344,32 @@ a.social img {
   #body {
     width: 60%;
   }
+  .grid {
+    padding-top: 10vh;
+  }
   .portfolio a {
     font-size: 1em;
+    max-width: 240px;
   }
   .portfolio a .portfolio-category.image-container {
     height: 15vw;
     width: 15vw;
+    max-width: 240px;
     padding-bottom: 1vw;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 1600px) {
+  #header {
+    width: 70%;
+  }
+  #body {
+    width: 55%;
+  }
+  .grid {
+    padding-top: 7vh;
+  }
+  #footer {
+    width: 70%;
+    left: 17%;
   }
 }
