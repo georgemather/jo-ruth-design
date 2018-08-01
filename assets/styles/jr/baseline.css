@@ -118,15 +118,17 @@ a.social img {
   background-repeat: no-repeat;
   background-position: center;
 }
-#footer {
+.copyright-notice {
   color: #808080;
-  text-align: center;
   text-transform: uppercase;
+}
+#footer {
+  text-align: center;
   left: 0;
   width: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   font-size: 1em;
-  bottom: 0px;
+  bottom: 10px;
   position: absolute;
   font-size: 9px;
 }

@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>test</title>
+    <script>
+      var image = new Image(100,100);
+
+      setInterval(function(){
+        if(image.complete){
+          alert(image.naturalHeight);
+        }
+      }, 100);
+      image.src = "assets/img_demo/artwork/magpies.png";
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

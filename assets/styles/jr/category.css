@@ -1,0 +1,161 @@
+.artwork-container {
+  position: absolute;
+  top: 180px;
+  margin: 0;
+}
+figcaption.description {
+  bottom: 0;
+  position: absolute;
+  font-size: 10px;
+  text-align: left;
+}
+figcaption.description .artwork-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+figcaption.description p {
+  margin: 3px 0 3px 0;
+  color: #808080;
+}
+.artwork-lightbox {
+  position: fixed;
+  display: none;
+  z-index: 102;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+.artwork-lightbox .artwork {
+  position: absolute;
+  background-positon: center center;
+}
+.artwork-lightbox figcaption {
+  bottom: 10px;
+  text-align: center;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+}
+.artwork-lightbox figcaption p {
+  color: #fff;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4em;
+  margin: 0 0.1em;
+  cursor: pointer;
+}
+.carousel-button.right {
+  right: 0;
+}
+.artwork {
+  position: relative;
+  background-image: url("../../img_demo/artwork/001.jpg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.thumbnails {
+  margin-top: 52vh;
+  width: 100%;
+  height: 10vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.thumbnails::-webkit-scrollbar {
+  height: 3px;
+  border: 4px solid #fff;
+}
+.thumbnails::-webkit-scrollbar-thumb {
+  background-color: #e7e7e7;
+}
+.slider {
+  width: 200%;
+}
+.slider img {
+  height: 10vh;
+  margin: 0 8px;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.slider img.selected {
+  opacity: 1;
+}
+@media screen and (orientation: portrait) and (min-height: 600px) {
+  .thumbnails {
+    margin-top: 58vh;
+  }
+}
+@media screen and (orientation: portrait) and (min-height: 700px) {
+  .thumbnails {
+    margin-top: 62vh;
+  }
+}
+@media screen and (orientation: portrait) and (min-height: 820px) {
+  .thumbnails {
+    margin-top: 66vh;
+  }
+}
+@media screen and (orientation: portrait) and (min-height: 950px) {
+  .artwork-container figcaption {
+    font-size: 1.1em;
+    padding-bottom: 15px;
+  }
+  .thumbnails {
+    margin-top: 71vh;
+  }
+}
+@media screen and (orientation: portrait) and (min-height: 1200px) {
+  .thumbnails {
+    margin-top: 74vh;
+  }
+}
+@media screen and (orientation: landscape) {
+  .artwork-container {
+    position: fixed;
+  }
+  .artwork-container figcaption {
+    bottom: 0px;
+    font-size: 0.9em;
+  }
+  .thumbnails {
+    margin-top: 13px;
+    width: 10vw;
+    height: 80vh;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .slider {
+    height: 200%;
+    width: 12vh;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+  .slider img {
+    height: 12vh;
+    padding: 0px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 1000px) {
+  .artwork-container figcaption {
+    bottom: 50px;
+    font-size: 1em;
+  }
+  .artwork-container figcaption p {
+    margin-bottom: 5px;
+  }
+}
