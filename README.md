@@ -26,7 +26,7 @@ As it stands, half of the end-user-facing stuff is done for all devices and woul
 
 There are multiple js and css files for the project, and jQuery `$(document).ready()` gets called multiple times. This is largely because the sections were developed separately and were intended to be subsequently integrated, but inevitably this generates clashes and redundancies.
 
-## Work that remained
+## Work Remaining
 1. To complete the portfolio view pages styles and js
 2. To style the news page
 3. To style the contact form
