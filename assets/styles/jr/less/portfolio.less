@@ -1,0 +1,128 @@
+//portfolio styles (minor)
+.page-section{
+  text-align:center;
+  vertical-align: center;
+  left:0;
+  top:0;
+  width:100%;
+  border-bottom: 1px solid #fbfbfb;
+}
+.page-section:nth-child(even){
+  //background: #fbfbfb;
+}
+.page-section:last-of-type{
+  border:0px;
+}
+.project{
+  font-weight: 300;
+  margin: 0 auto;
+  position:relative;
+  h1{
+    font-weight: 400;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 11vh 0;
+  }
+  div.project-samples{
+    position: relative;
+    /* top: 50%; */
+    width: 250px;
+    height: 250px;
+    left: 5%;
+    background-image: url(../../img_demo/artwork/thumbnails/006.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* transform: translateY(-50%); */
+    float: left;
+  }
+  div.description{
+    position: relative;
+    /* top: 50%; */
+    height: 350px;
+    /* left: 50%; */
+    width: 40%;
+    /* transform: translateY(-50%); */
+    float: right;
+    right: 5%;
+    font-size: 1.4em;
+    text-align: left;
+    vertical-align: middle;
+    /* padding: 40px; */
+    line-height: 2.2em;
+  }
+  .gallery{
+    width: 250px;
+    position: relative;
+    float: left;
+    padding-top: 40px;
+    /* text-align: left; */
+    left: 5%;
+    img{
+      width:32px;
+      height:32px;
+      padding: 0 8px;
+      opacity:0.55;
+      cursor:pointer;
+    }
+    img.selected{
+      opacity:1;
+      cursor:default;
+    }
+
+  }
+}
+
+.counter{
+  position: fixed;
+  top: 55vh;
+  right: -5px;
+  transform: translateY(-50%);
+  font-size: 4em;
+  color: #808080;
+  ul{
+    list-style-type: circle;
+    li{
+      cursor:pointer;
+    }
+    li.current{
+      list-style-type: disc;
+    }
+  }
+}
+
+@media screen and (min-width:1024px) and (orientation:landscape){
+  .project{
+    .counter{
+      right:2%;
+    }
+    div.description{
+      font-size:2.2em;
+      line-height: 1.8em;
+    }
+    div.project-samples{
+      width:300px;
+      height:300px;
+    }
+    div.gallery{
+      width:300px;
+    }
+  }
+}
+@media screen and (min-width:1340px) and (orientation:landscape){
+  .project{
+    div.description{
+      //font-size:2.4em;
+      line-height: 2em;
+    }
+    div.project-samples{
+      width:350px;
+      height:350px;
+    }
+    div.gallery{
+      width:350px;
+    }
+  }
+}

@@ -140,8 +140,19 @@ $( window ).resize(function() {
   /*should only be done if not mobile; they can't resize except when they rotate;
     checking if the width changes avoids the window jumping when safari and other
     browsers auto-hide their menus*/
-  if(window.mobileAndTabletcheck()){
-    if (window.innerWidth != window.oldwidth){
+  if($('.artwork').length){
+    if(window.mobileAndTabletcheck()){
+      if (window.innerWidth != window.oldwidth){
+        adjustArtworkLayout(function(){
+          adjustSlider();
+        });
+        if($('.artwork-lightbox').css('display') == 'block'){
+          setTimeout(function(){
+            adjustLightboxLayout();
+          },100);
+        }
+      }
+    } else {
       adjustArtworkLayout(function(){
         adjustSlider();
       });
@@ -150,15 +161,6 @@ $( window ).resize(function() {
           adjustLightboxLayout();
         },100);
       }
-    }
-  } else {
-    adjustArtworkLayout(function(){
-      adjustSlider();
-    });
-    if($('.artwork-lightbox').css('display') == 'block'){
-      setTimeout(function(){
-        adjustLightboxLayout();
-      },100);
     }
   }
   if (window.innerHeight > window.innerWidth){
